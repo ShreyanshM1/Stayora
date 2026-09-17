@@ -24,3 +24,35 @@ Users can explore available properties, view listing details, create new listing
 - **Database:** MongoDB, Mongoose
 - **Templating:** EJS, EJS Mate
 - **Tools:** Git, GitHub, VS Code, Nodemon
+
+## 📂 Project Structure
+
+```text
+
+Stayora/
+
+│
+
+├── init/
+
+├── models/
+
+├── public/
+
+├── views/
+
+│   ├── includes/
+
+│   ├── layouts/
+
+│   └── listings/
+
+│
+
+├── app.js
+
+├── package.json
+
+├── package-lock.json
+
+└── README.md
