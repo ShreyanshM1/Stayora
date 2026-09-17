@@ -23,6 +23,17 @@ The project is currently running locally and will be deployed soon.
 - 🔄 RESTful routing
 - 📄 Dynamic pages using EJS
 
+## ✨ Project Highlights
+
+- Built a complete CRUD-based property listing application
+- Implemented RESTful routing using Express.js
+- Connected the application to MongoDB using Mongoose
+- Used EJS and EJS-Mate for dynamic page rendering
+- Created reusable Navbar and Footer components
+- Used Bootstrap for responsive and clean UI
+- Implemented listing creation, editing, viewing, and deletion
+- Organized the project using a structured MVC-style architecture
+
 ## 🛠️ Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript, Bootstrap
