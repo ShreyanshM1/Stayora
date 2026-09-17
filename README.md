@@ -25,6 +25,24 @@ Users can explore available properties, view listing details, create new listing
 - **Templating:** EJS, EJS Mate
 - **Tools:** Git, GitHub, VS Code, Nodemon
 
+## 📸 Screenshots
+
+### 🏠 Home / Listings
+
+![Home Page](screenshots/home.png)
+
+### 🏡 Listing Details
+
+![Listing Details](screenshots/show.png)
+
+### ➕ Create Listing
+
+![Create Listing](screenshots/new.png)
+
+### ✏️ Edit Listing
+
+![Edit Listing](screenshots/edit.png)
+
 ## 📂 Project Structure
 
 ```text
@@ -56,3 +74,4 @@ Stayora/
 ├── package-lock.json
 
 └── README.md
+```
