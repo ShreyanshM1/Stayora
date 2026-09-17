@@ -4,6 +4,12 @@ Stayora is a full-stack property listing web application inspired by modern vaca
 
 Users can explore available properties, view listing details, create new listings, edit existing listings, and delete listings.
 
+## 🌐 Live Demo
+
+🚧 Coming soon...
+
+The project is currently running locally and will be deployed soon.
+
 ## 🚀 Features
 
 - 🏠 View all property listings
