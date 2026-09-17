@@ -1,5 +1,11 @@
 # 🏡 Stayora
 
+![Stayora](https://img.shields.io/badge/Stayora-Property%20Rental%20Platform-blue)
+![Node.js](https://img.shields.io/badge/Node.js-Backend-green)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-brightgreen)
+![Express.js](https://img.shields.io/badge/Express.js-Framework-black)
+![EJS](https://img.shields.io/badge/EJS-Templating-orange)
+
 Stayora is a full-stack property listing web application inspired by modern vacation-rental platforms.
 
 Users can explore available properties, view listing details, create new listings, edit existing listings, and delete listings.
