@@ -34,6 +34,21 @@ The project is currently running locally and will be deployed soon.
 - Implemented listing creation, editing, viewing, and deletion
 - Organized the project using a structured MVC-style architecture
 
+## 🧠 What I Learned
+
+Building Stayora helped me gain practical experience in:
+
+- Backend development with Node.js and Express.js
+- MongoDB database operations
+- Mongoose schemas and models
+- CRUD operations
+- RESTful routing
+- EJS templating and layouts
+- Express middleware
+- Form handling and validation
+- Bootstrap-based responsive UI
+- Git and GitHub workflow
+
 ## 🛠️ Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript, Bootstrap
