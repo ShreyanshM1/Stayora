@@ -153,8 +153,6 @@ Building Stayora helped me gain practical experience in:
 
 ![Edit Listing](screenshots/edit.png)
 
-## 📂 Project Structure
-
 ## 📁 Project Structure
 
 ```text
