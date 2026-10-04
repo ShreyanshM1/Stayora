@@ -12,5 +12,3 @@ const userSchema = new Schema({
 userSchema.plugin(passportLocalMongoose);
 
 module.exports = mongoose.model("User", userSchema);
-
-// passport-local-mongoose automatically make a field with username and password so we don't have to make that
