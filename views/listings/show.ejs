@@ -2,38 +2,98 @@
 
 <div class="row mt-3">
   <div class="col-8 offset-3">
-    <h3>Listing Details</h3>
+    <h3><%= listing.title %></h3>
   </div>
-  <div class="card col-6 offset-3 show-card">
+  <div class="card col-6 offset-3 show-card listing-card">
     <img
       src="<%= listing.image %>"
       class="card-img-top show-img"
       alt="listing image"
     />
     <div class="card-body">
+      <p class="card-text">Owned by<i> <%= listing.owner.username %> </i></p>
+      <p class="card-text"><%= listing.description %></p>
       <p class="card-text">
-        <b> <%= listing.title %> </b><br />
-        <%= listing.description %> <br />
-        &#8377;<%= listing.price %> <br />
-        <%= listing.location %> <br />
-        <%= listing.country %> <br />
+        &#8377;<%= listing.price.toLocaleString("en-IN") %>
       </p>
+      <p class="card-text"><%= listing.location %></p>
+      <p class="card-text"><%= listing.country %></p>
     </div>
   </div>
-</div>
 
-<div class="btns">
-  <a
-  class="btn btn-dark edit-btn offset-3 col-1"
-  href="/listings/<%= listing._id %>/edit"
-  >Edit</a
->
-&nbsp;&nbsp;
-<form
-  style="display: inline-block"
-  method="post"
-  action="/listings/<%= listing._id %>?_method=DELETE"
->
-  <button class="btn btn-dark offset-3">Delete</button>
-</form>
+  <% if(currUser && listing.owner._id.equals(currUser._id)) { %>
+  <div class="btns">
+    <a
+      class="btn btn-dark edit-btn offset-3 col-1"
+      href="/listings/<%= listing._id %>/edit"
+      >Edit</a
+    >
+    &nbsp;&nbsp;
+    <form
+      style="display: inline-block"
+      method="post"
+      action="/listings/<%= listing._id %>?_method=DELETE"
+    >
+      <button class="btn btn-dark offset-3">Delete</button>
+    </form>
+  </div>
+  <% } %>
+  <div class="col-8 offset-3">
+    <hr />
+    <% if(currUser) { %>
+    <h4>Leave a Review</h4>
+    <form
+      method="post"
+      action="/listings/<%= listing.id %>/reviews"
+      class="needs-validation"
+      novalidate
+    >
+      <div class="mb-3 mt-3">
+        <label for="rating" class="form-label">Rating</label>
+        <input
+          type="range"
+          id="rating"
+          name="review[rating]"
+          min="1"
+          max="5"
+          class="form-range"
+        />
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="comment" class="form-label">Comments</label>
+        <textarea
+          name="review[comment]"
+          id="comment"
+          rows="5"
+          cols="10"
+          class="form-control"
+          required
+        ></textarea>
+        <div class="invalid-feedback">Please add some comments for review</div>
+      </div>
+
+      <button class="btn btn-outline-dark">Submit</button>
+    </form>
+    <hr />
+    <% } %>
+
+    <h3>All Reviews</h3>
+
+    <div class="row">
+      <% for(review of listing.reviews) {%>
+      <div class="card col-5 mb-3 ms-3">
+        <h5 class="card-title">@<%= review.author.username %></h5>
+        <p class="card-text"><%= review.comment %></p>
+        <p class="card-text"><b><%= review.rating %></b>&#9733;</p>
+        <form
+          class="mb-2"
+          method="post"
+          action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE"
+        >
+          <button class="btn btn-sm btn-dark">Delete</button>
+        </form>
+      </div>
+      <% } %>
+    </div>
+  </div>
 </div>
