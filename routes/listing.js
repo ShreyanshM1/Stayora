@@ -25,10 +25,6 @@ router.post(
   validateListing,
   wrapAsync(async (req, res) => {
     const newListing = new Listing(req.body.listing);
-    //Schema Validation Error with if-else
-    // if (!newListing.description) {
-    //   throw new ExpressError(404, "Description is missing");
-    // }
     newListing.owner = req.user._id;
     await newListing.save();
     req.flash("success", "New Listing Created!");
@@ -80,9 +76,6 @@ router.put(
   isOwner,
   validateListing,
   wrapAsync(async (req, res) => {
-    // if (!req.body.listing) {
-    //   throw new ExpressError(404, "Send valid data for listing");
-    // }
     let { id } = req.params;
     await Listing.findByIdAndUpdate(id, { ...req.body.listing });
     req.flash("success", "Listing Updated!");
@@ -98,7 +91,6 @@ router.delete(
   wrapAsync(async (req, res) => {
     let { id } = req.params;
     let deletedListing = await Listing.findByIdAndDelete(id);
-    console.log(deletedListing);
     req.flash("success", "Listing Deleted");
     res.redirect("/listings");
   })
