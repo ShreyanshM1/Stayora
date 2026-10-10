@@ -14,7 +14,7 @@
     margin-right: 0.5rem;
   }
 
-  .search-input {
+  .search-input{
     border-radius: 25px;
     padding: 0.5rem 3rem 0.5rem 3rem;
   }
@@ -51,10 +51,10 @@
       </div>
       <div class="navbar-nav ms-auto">
         <a class="nav-link" href="/listings/new">Airbnb your home</a>
-        <% if(!locals.currUser) { %>
+        <% if(!currUser) { %>
         <a class="nav-link" href="/signup"><b>Sign up</b></a>
         <a class="nav-link" href="/login"><b>Log in</b></a>
-        <% } else { %>
+        <% } %> <% if(currUser) { %>
         <a class="nav-link" href="/logout">Log out</a>
         <% } %>
       </div>
