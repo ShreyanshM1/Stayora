@@ -1,127 +1,81 @@
-# 🏡 Stayora
+🏡 Stayora — Full-Stack Property Rental Platform
 
-![Stayora](https://img.shields.io/badge/Stayora-Property%20Rental%20Platform-blue)
-![Node.js](https://img.shields.io/badge/Node.js-Backend-green)
-![MongoDB](https://img.shields.io/badge/MongoDB-Database-brightgreen)
-![Express.js](https://img.shields.io/badge/Express.js-Framework-black)
-![EJS](https://img.shields.io/badge/EJS-Templating-orange)
+Stayora is a full-stack property rental web application inspired by modern vacation-rental platforms. Users can explore property listings, view listing details, manage their own listings, authenticate securely, and share reviews and ratings.
 
-Stayora is a full-stack property rental web application inspired by modern vacation-rental platforms.
+🌐 Live Demo: https://stayora-yhq0.onrender.com
+💻 GitHub Repository: https://github.com/ShreyanshM1/Stayora
 
-Users can explore properties, view listing details, create and manage listings, authenticate securely, and leave reviews and ratings.
+⸻
 
-## 🌐 Live Demo
+✨ Features
 
-🚧 Coming soon...
+🔐 Authentication & Authorization
 
-The project is currently running locally and will be deployed soon.
+* User signup, login, and logout
+* Passport.js authentication
+* Session management using Express-session
+* Cookie-based session handling
+* Protected routes for authenticated users
+* Ownership-based authorization for listings and reviews
+* Flash messages for success and error feedback
 
-## 🚀 Features
+🏠 Property Listings
 
-### 🔐 Authentication
-- User signup and login
-- Logout functionality
-- Passport.js authentication
-- Express-session based session management
-- Cookie-based authentication
-- Flash messages for user feedback
+* Browse available property listings
+* View individual listing details
+* Create new listings
+* Edit and delete your own listings
+* Listing ownership verification
 
-### 🔒 Authorization
-- Protected routes for authenticated users
-- Listing ownership authorization
-- Review ownership authorization
-- Users can only edit/delete their own listings
-- Users can only delete their own reviews
+⭐ Reviews & Ratings
 
-### 🏠 Property Listings
-- View all property listings
-- View individual listing details
-- Create new listings
-- Edit existing listings
-- Delete listings
-- Owner-based listing management
+* Add reviews to property listings
+* Rate properties
+* Display reviews on listing detail pages
+* Delete reviews
+* Review ownership authorization
 
-### ⭐ Reviews & Ratings
-- Add reviews to listings
-- Rating system
-- Display reviews on listing pages
-- Delete reviews
-- Review authorization
+🎨 User Interface
 
-### 🎨 User Interface
-- Responsive UI
-- Bootstrap styling
-- Dynamic pages using EJS
-- Reusable Navbar and Footer
-- Flash messages for success/error feedback
+* Responsive interface built with Bootstrap
+* Dynamic server-rendered pages using EJS
+* Reusable navigation bar and footer
+* Flash messages for user feedback
+* Form validation and error handling
 
-## 🧠 Backend Concepts Implemented
+⸻
 
-- RESTful routing
-- MVC-style project structure
-- Authentication & Authorization
-- Passport.js
-- Express Sessions
-- Cookies
-- Express Middleware
-- Protected Routes
-- CRUD Operations
-- MongoDB & Mongoose
-- EJS Server-Side Rendering
-- Flash Messages
-- Form Validation
-- Error Handling
+🛠️ Tech Stack
 
-## ✨ Project Highlights
+Technology	Purpose
+Node.js	JavaScript runtime
+Express.js	Backend framework and routing
+MongoDB	Database
+Mongoose	Database modeling and operations
+EJS	Server-side templating
+EJS-Mate	Layouts and reusable templates
+Passport.js	Authentication
+Express-session	Session management
+Bootstrap	Responsive UI styling
+HTML, CSS, JavaScript	Frontend development
+Git & GitHub	Version control
 
-- Built a full-stack CRUD-based property rental application
-- Implemented RESTful routing using Express.js
-- Connected the application to MongoDB using Mongoose
-- Implemented user authentication using Passport.js
-- Implemented authorization using custom Express middleware
-- Added signup, login and logout functionality
-- Implemented session management using Express-session
-- Used cookies for session-based authentication
-- Added flash messages for success and error feedback
-- Implemented protected routes and ownership-based authorization
-- Built a review and rating system
-- Added authorization for listing and review operations
-- Used EJS and EJS-Mate for dynamic page rendering
-- Created reusable Navbar and Footer components
-- Used Bootstrap for responsive UI
-- Organized the project using a structured MVC-style architecture
+⸻
 
-## 🧠 What I Learned
+🧠 Key Technical Implementations
 
-Building Stayora helped me gain practical experience in:
+* RESTful routing and MVC-style organization
+* CRUD operations for property listings and reviews
+* Authentication using Passport.js
+* Authorization using custom Express middleware
+* Session and cookie management
+* Protected routes and ownership-based access control
+* MongoDB integration using Mongoose
+* Dynamic server-side rendering with EJS
+* Reusable layouts and partial templates
+* Form validation and centralized error handling
 
-- Backend development with Node.js and Express.js
-- MongoDB database operations
-- Mongoose schemas and models
-- CRUD operations
-- RESTful routing
-- Authentication using Passport.js
-- Authorization and protected routes
-- Express-session and cookies
-- Express middleware
-- Flash messages
-- EJS templating and layouts
-- Form handling and validation
-- Error handling
-- Review and rating systems
-- Bootstrap-based responsive UI
-- Git and GitHub workflow
-
-## 🛠️ Tech Stack
-
-- **Frontend:** HTML, CSS, JavaScript, Bootstrap
-- **Backend:** Node.js, Express.js
-- **Database:** MongoDB, Mongoose
-- **Authentication:** Passport.js
-- **Session Management:** Express-session, Cookies
-- **Templating:** EJS, EJS-Mate
-- **Other:** Express Middleware, Flash Messages
-- **Tools:** Git, GitHub, VS Code, Nodemon
+⸻
 
 ## 📸 Screenshots
 
@@ -153,9 +107,50 @@ Building Stayora helped me gain practical experience in:
 
 ![Edit Listing](screenshots/edit.png)
 
-## 📁 Project Structure
+⸻
 
-```text
+🚀 Getting Started
+
+Follow these steps to run Stayora locally.
+
+1. Clone the repository
+
+git clone https://github.com/ShreyanshM1/Stayora.git
+cd Stayora
+
+2. Install dependencies
+
+npm install
+
+3. Configure environment variables
+
+Create a .env file in the project root and configure the environment variables required by your application.
+
+For example:
+
+ATLASDB_URL=your_mongodb_connection_string
+SECRET=your_session_secret
+
+Use the exact variable names expected by your code. If your application requires additional environment variables, configure those too.
+
+Important: Never commit your actual database credentials, session secrets, or other sensitive environment variables to GitHub.
+
+4. Start the application
+
+Run the command configured in your package.json. If your project uses Nodemon with the app.js entry point, you can typically run:
+
+npm start
+
+If no start script is configured, use the appropriate command for your project, such as:
+
+node app.js
+
+Open the local address displayed by your application.
+
+⸻
+
+📁 Project Structure
+
 Stayora/
 ├── init/
 ├── models/
@@ -173,4 +168,33 @@ Stayora/
 ├── package.json
 ├── package-lock.json
 └── README.md
-```
+
+⸻
+
+📚 What I Learned
+
+Developing and deploying Stayora helped me gain practical experience with:
+
+* Full-stack web application development
+* RESTful APIs and Express routing
+* MongoDB database operations
+* Authentication and authorization
+* Session management and cookies
+* Express middleware and protected routes
+* EJS templating and reusable layouts
+* CRUD operations and form validation
+* Error handling and user feedback
+* Version control with Git and GitHub
+* Deploying a web application
+
+⸻
+
+👨‍💻 Author
+
+Shreyansh Mishra
+
+* GitHub: https://github.com/ShreyanshM1
+
+⸻
+
+⭐ If you find this project interesting, consider giving the repository a star!
